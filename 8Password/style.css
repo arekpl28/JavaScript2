@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 5vw;
+  text-align: center;
+  font-family: arial;
+}
+
+label,
+input {
+  height: 40px;
+  font-size: 40px;
+  margin: 20px;
+}
+
+div {
+  border: 2px solid black;
+  font-size: 40px;
+  margin: 20px;
+}
+
+.active {
+  background-color: #ddd;
+}
