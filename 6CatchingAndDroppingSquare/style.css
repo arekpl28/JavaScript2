@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  background-color: #000;
+  cursor: pointer;
+}
