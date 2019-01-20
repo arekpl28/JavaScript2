@@ -27,31 +27,34 @@ function computerChoice() {
 
 handSelection = (event) => {
   game.playerHand = event.target.dataset.option;
-  hands.forEach(hand => hand.style.boxShadow = "");
-  event.target.style.boxShadow = "0 0 5px 5px yellow";
-  yourChoice.textContent = "";
+  hands.forEach(hand => hand.classList.remove("first"));
+  event.target.classList.add("first");
+  yourChoice.textContent = game.playerHand;
   aiChoice.textContent = "";
   whoWin.textContent = "";
 }
 
-stratGame = () => {
-  if (!game.playerHand) return alert("wybierz dłoń")
-  game.aiHand = computerChoice()
-  yourChoice.textContent = game.playerHand;
-  aiChoice.textContent = game.aiHand;
+function winner() {
   if (game.playerHand === "peper" && game.aiHand === "stone" || game.playerHand === "stone" && game.aiHand === "scissors" || game.playerHand === "scissors" && game.aiHand === "peper") {
-    whoWin.textContent = "You!!";
     whoWin.style.color = "green"
     gameSummary.won++;
+    return "You!!";
   } else if (game.playerHand === game.aiHand) {
-    whoWin.textContent = "Draw"
     whoWin.style.color = "blue"
     gameSummary.draws++
+    return "Draw"
   } else {
-    whoWin.textContent = "Computer!"
     whoWin.style.color = "red"
     gameSummary.lost++
+    return "Computer!"
   }
+}
+
+stratGame = () => {
+  if (!game.playerHand) return alert("Choose a hand!!")
+  game.aiHand = computerChoice()
+  aiChoice.textContent = game.aiHand;
+  whoWin.textContent = winner();
   wins.textContent = gameSummary.won
   draws.textContent = gameSummary.draws
   losses.textContent = gameSummary.lost

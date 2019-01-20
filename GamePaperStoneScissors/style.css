@@ -40,7 +40,10 @@ div.wrap {
   width: 200px;
   margin: 20px;
   display: inline-block;
+}
 
+.first {
+  box-shadow: 0 0 5px 5px yellow;
 }
 
 button {
