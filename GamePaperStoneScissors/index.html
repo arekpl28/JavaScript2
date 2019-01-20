@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Game: paper, stone, scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Game: paper, stone, scissors</h1>
+
+  <h3>Please choose:</h3>
+  <div class="select">
+    <img data-option="peper" class="first" src="peper.jpg" alt="" title="peper">
+    <img data-option="stone" src="stone.jpg" alt="" title="stone">
+    <img data-option="scissors" src="scissors.jpg" alt="" title="scissors">
+  </div>
+
+  <button class="start">Let's play!</button>
+  <div class="wrap">
+    <div class="panel-left">
+      <h3>The result of the game.</h3>
+      <p>Your choice: <span data-summary="your-choice"></span></p>
+      <p>Computer choise: <span data-summary="ai-choice"></span></p>
+      <h2>The winner is: </h2>
+      <h2><span data-summary="who-win"></span></h2>
+    </div>
+
+    <div class="panel-right">
+      <h3>Current results</h3>
+      <p class="numbers">Game number: <span>0</span></p>
+      <p class="wins">Games won: <span>0</span></p>
+      <p class="losses">Lost games: <span>0</span></p>
+      <p class="draws">Draws: <span>0</span></p>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
